@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding Guestbook</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Sign Our Guestbook</h1>
+            <p>Share your well wishes!</p>
+            <img src="andrew_youstina.jpg" alt="Groom and Bride" class="header-image">
+        </header>
+
+        <form id="guestbook-form">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Your name">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Leave a lovely message..."></textarea>
+            </div>
+
+            <button type="submit" id="submit-button">Send Your Wishes</button>
+
+            <div id="response-message"></div>
+        </form>
+
+        <footer>
+            <p>Thank you for celebrating with us!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

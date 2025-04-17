@@ -1,0 +1,186 @@
+/* Basic Reset & Font Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    background-color: #fdfaf6; /* Soft off-white */
+    color: #333;
+    padding: 1em; /* Add padding for small screens */
+}
+
+/* Container for centering content */
+.container {
+    max-width: 700px;
+    margin: 2em auto;
+    background-color: #fff;
+    padding: 2em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 2.5em;
+}
+
+header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    font-size: 3em; /* Responsive font size */
+    color: #8B4513; /* Saddle Brown */
+    margin-bottom: 0.2em;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 1em; /* Add some space below the paragraph */
+}
+
+.header-image {
+    display: block; /* To prevent inline behavior */
+    max-width: 100%; /* Make it responsive within its container */
+    height: auto; /* Maintain aspect ratio */
+    margin: 1em auto; /* Add some spacing above and below, and center it */
+    border-radius: 8px; /* Optional: add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+}
+
+/* Form Styling */
+#guestbook-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em; /* Space between form groups */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 400;
+    margin-bottom: 0.5em;
+    color: #444;
+    font-size: 1.05em;
+}
+
+textarea,
+input[type="text"] {
+    padding: 0.8em;
+    border: 1px solid #ddd; /* Lighter border */
+    border-radius: 8px; /* More rounded corners */
+    font-family: inherit;
+    font-size: 1em;
+    width: 100%; /* Make inputs fill container */
+    background-color: #f9f9f9; /* Light background */
+    color: #555; /* Darker text color for better contrast */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    padding: 0.8em 1.5em;
+    background-color: #a0522d; /* Sienna */
+    color: white;
+    border: none;
+    border-radius: 8px; /* More rounded corners */
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    align-self: center; /* Center button */
+    margin-top: 1em;
+}
+
+button[type="submit"]:hover {
+    background-color: #8B4513; /* Saddle Brown */
+}
+
+button[type="submit"]:active {
+     transform: scale(0.98);
+}
+
+button[type="submit"]:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Response Message Area */
+#response-message {
+    margin-top: 1.5em;
+    padding: 1em;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px; /* More rounded corners */
+    display: none; /* Hidden by default */
+}
+
+#response-message.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    display: block;
+    border: 1px solid #d6e9c6; /* Add a border for visual separation */
+}
+
+#response-message.error {
+    background-color: #f2dede;
+    color: #a94442;
+    display: block;
+    border: 1px solid #ebccd1; /* Add a border for visual separation */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 3em;
+    padding-top: 1em;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* --- Responsiveness --- */
+
+/* Adjust font sizes and padding for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5em;
+        margin: 1em; /* Reduce margin on small screens */
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    button[type="submit"] {
+        width: 100%; /* Make button full width */
+    }
+
+    .header-image {
+        max-height: 300px; /* Example: limit height on smaller screens */
+    }
+}
+
+@media (max-width: 400px) {
+     header h1 {
+        font-size: 2em;
+    }
+    .container {
+        padding: 1em;
+    }
+}
